@@ -1,0 +1,148 @@
+Problem Statement: 
+
+Create a program that calculates a persons caloric needs. The calories will be calculated from input of the user entering their height, current weight, age, and activity level. The output will be their current calories needed to maintain their weight. 
+
+Nouns: calories, height, weight, age, activity level
+
+Verbs: calculates, entering, input, output
+
+
+Inputs: 
+Height
+Weight 
+Age
+Activity level
+
+
+Processes: 
+Prompt user for gender
+Prompt user for height
+Prompt user for weight
+Prompt user for activity level
+Prompt user for age
+Calculate calories based off inputs
+Ask user if they would like to calculate again.
+Display output
+
+Output: 
+Caloric needs
+
+Pseudocode: 
+
+CalorieCalculator
+  Initialize bmr
+  Initialize gender
+  initialize weight
+  Initialize height
+  Initialize age
+  Initialize activityLevel
+  Initialize caloriesCalculated
+  Initialize addCalculation = "Yes"
+  Initialize factor
+  Initialize numOfCalculation = 0
+
+
+  While statement (addCalculation = "Yes)
+    Prompt user for gender
+    Prompt user for weight
+    Prompt user for height
+    Prompt user for age
+    Prompt user for activityLevel
+    Prompt user for addCalculation
+
+    If gender = "Female" use bmr = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age)
+    Else if gender = "Male" use bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age)
+
+    Switch for activityLevel
+    Case "Sedentary" 
+    Factor 1.2
+    Case "Moderate"
+    Factor 1.5
+    Case "Active"
+    Factory 1.8
+
+    Calculate calories = bmr * factor
+    Increment numOfCalculations
+
+    Output the calculation of calories
+    If addCalculations != "Yes" 
+  END Loop
+  
+  Display "Thank you!" 
+    
+END
+
+
+
+
+Test: 
+
+1. Input: Male, 156, 72, 45, Active, No
+
+Expected: 
+
+1. Your daily calorie expenditure is  4082.15.
+
+
+Thank you!
+
+Actual:
+ 
+1. Your daily calorie expenditure is  4082.15.
+
+
+Thank you!
+
+2. Inputs: Female, 135, 65, 35, Moderate, Yes, Male, 210, 68, 38, Moderate, No
+
+Expected: 
+1. Your daily calorie expenditure is  2610.90.
+
+
+2. Your daily calorie expenditure is  4518.24.
+
+
+Thank you!
+    
+      
+Actual: 
+1. Your daily calorie expenditure is  2610.90.
+
+
+2. Your daily calorie expenditure is  4518.24.
+
+
+Thank you!
+
+
+3. Inputs: Male, 178, 72, 56, Tive, No
+
+Expected: 
+Invalid activity level, please try again.
+
+1. Your daily calorie expenditure is  NaN.
+
+
+Thank you!
+    
+      
+Actual: 
+Invalid activity level, please try again.
+
+1. Your daily calorie expenditure is  NaN.
+
+
+Thank you!
+    
+      
+
+
+
+    
+      
+
+
+
+  
+    
+
